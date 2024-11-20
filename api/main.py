@@ -17,7 +17,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 # Configuración del middleware CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5500"],  # Origen permitido (frontend)
+    allow_origins=["https://g21.com.mx"],  # Origen permitido (frontend)
     allow_credentials=True,
     allow_methods=["*"],  # Métodos HTTP permitidos
     allow_headers=["*"],  # Encabezados permitidos
