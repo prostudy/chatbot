@@ -6,6 +6,7 @@ from difflib import get_close_matches
 import numpy as np
 from dotenv import load_dotenv
 import os
+import json
 
 app = FastAPI()
 
@@ -25,20 +26,6 @@ app.add_middleware(
 )
 
 
-# Diccionario de preguntas y respuestas
-# Diccionario de preguntas y respuestas
-faq = {
-    "¿De qué trata la película?": {
-        "respuesta": "Es la historia de cómo mi hija Marina me invita a vivir con ella y juntas descubrimos que nunca es tarde para comenzar de nuevo.",
-        "sticker": "https://m.media-amazon.com/images/M/MV5BMTk3ZWNlNzAtNTRjYy00MjNjLTlhYjMtOWI4MjM5NDE4ZmUzXkEyXkFqcGc@._V1_QL75_UX328_.jpg"
-    },
-    "¿Quién es Patricia?": {
-        "respuesta": "Soy yo, una mujer que pensaba que ya todo había pasado, hasta que la vida me sorprendió con una segunda oportunidad.",
-        "sticker": ""
-    },
-    # Agrega más preguntas con respuestas y stickers asociados
-}
-
 ## Función para generar embeddings de preguntas
 def obtener_embedding(texto):
     response = openai.Embedding.create(
@@ -47,9 +34,19 @@ def obtener_embedding(texto):
     )
     return np.array(response["data"][0]["embedding"])
 
-# Precalcular embeddings para el FAQ
-faq_embeddings = {pregunta: obtener_embedding(pregunta) for pregunta in faq}
+# Cargar embeddings desde archivo
+with open("./backend/faq_embeddings.json", "r", encoding="utf-8") as f:
+    raw_embeddings = json.load(f)
 
+faq_embeddings = {
+    pregunta: np.array(embedding)
+    for pregunta, embedding in raw_embeddings.items()
+}
+
+# Cargar datos del FAQ (respuestas y stickers)
+with open("./backend/faq_data.json", "r", encoding="utf-8") as f:
+    faq = json.load(f)
+    
 # Buscar la pregunta más similar
 def encontrar_pregunta_mas_similar(pregunta_usuario):
     embedding_usuario = obtener_embedding(pregunta_usuario)
