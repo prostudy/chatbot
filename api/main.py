@@ -26,89 +26,18 @@ app.add_middleware(
 
 
 # Diccionario de preguntas y respuestas
+# Diccionario de preguntas y respuestas
 faq = {
-    "¿Qué tipos de aceites ofrece Quaker State?": {
-        "respuesta": "Quaker State ofrece aceites sintéticos, semisintéticos y minerales para satisfacer diferentes necesidades de motores.",
-        "sticker": "https://mexicodesconocido.com.mx/bardal.jpeg"
+    "¿De qué trata la película?": {
+        "respuesta": "Es la historia de cómo mi hija Marina me invita a vivir con ella y juntas descubrimos que nunca es tarde para comenzar de nuevo.",
+        "sticker": "https://m.media-amazon.com/images/M/MV5BMTk3ZWNlNzAtNTRjYy00MjNjLTlhYjMtOWI4MjM5NDE4ZmUzXkEyXkFqcGc@._V1_QL75_UX328_.jpg"
     },
-    "¿Cuándo debo cambiar el aceite de mi vehículo?": {
-        "respuesta": "Se recomienda cambiar el aceite cada 5,000 a 10,000 kilómetros dependiendo del tipo de aceite y las condiciones de manejo.",
-        "sticker": "https://mexicodesconocido.com.mx/bardal.jpeg"
+    "¿Quién es Patricia?": {
+        "respuesta": "Soy yo, una mujer que pensaba que ya todo había pasado, hasta que la vida me sorprendió con una segunda oportunidad.",
+        "sticker": ""
     },
-    "¿Qué diferencia hay entre un aceite sintético y un mineral?": {
-        "respuesta": "El aceite sintético ofrece mayor protección y rendimiento, especialmente en condiciones extremas, mientras que el mineral es más económico.",
-        "sticker": "https://mexicodesconocido.com.mx/bardal.jpeg"
-    },
-    "¿Cómo elijo el mejor aceite para mi motor?": {
-        "respuesta": "Consulta el manual del propietario de tu vehículo y selecciona un aceite con las especificaciones recomendadas.",
-        "sticker": "https://mexicodesconocido.com.mx/bardal.jpeg"
-    },
-    "¿Qué significa la viscosidad del aceite?": {
-        "respuesta": "La viscosidad indica qué tan espeso o fluido es el aceite. Por ejemplo, un 5W-30 es más fluido a bajas temperaturas.",
-        "sticker": "https://mexicodesconocido.com.mx/bardal.jpeg"
-    },
-    "¿Es seguro usar aceite sintético en motores antiguos?": {
-        "respuesta": "Sí, los aceites sintéticos modernos están diseñados para ser compatibles con la mayoría de los motores, incluso los antiguos.",
-        "sticker": "https://mexicodesconocido.com.mx/bardal.jpeg"
-    },
-    "¿Cuáles son los beneficios del aceite sintético Quaker State?": {
-        "respuesta": "El aceite sintético Quaker State proporciona mayor protección contra el desgaste, mejor limpieza del motor y mayor duración entre cambios.",
-        "sticker": "https://mexicodesconocido.com.mx/bardal.jpeg"
-    },
-    "¿Puedo mezclar diferentes tipos de aceites?": {
-        "respuesta": "No es recomendable, ya que podría afectar el rendimiento y la protección del motor.",
-        "sticker": "https://mexicodesconocido.com.mx/bardal.jpeg"
-    },
-    "¿Qué es el grado API en el aceite de motor?": {
-        "respuesta": "El grado API es una clasificación de calidad del aceite. Un aceite con API SN es adecuado para motores modernos.",
-        "sticker": "https://mexicodesconocido.com.mx/bardal.jpeg"
-    },
-    "¿Por qué mi motor consume más aceite de lo normal?": {
-        "respuesta": "El consumo excesivo de aceite puede deberse a fugas, desgaste del motor o uso de un aceite inadecuado.",
-        "sticker": "https://mexicodesconocido.com.mx/bardal.jpeg"
-    },
-    "¿Qué debo hacer si mi aceite se ve oscuro?": {
-        "respuesta": "El aceite oscuro no siempre es un problema; indica que está cumpliendo su función de limpiar el motor. Sin embargo, revísalo si está cerca del cambio programado.",
-        "sticker": "https://mexicodesconocido.com.mx/bardal.jpeg"
-    },
-    "¿Cuáles son las consecuencias de no cambiar el aceite a tiempo?": {
-        "respuesta": "El aceite sucio puede dañar el motor, aumentar el desgaste y reducir la eficiencia del combustible.",
-        "sticker": "https://mexicodesconocido.com.mx/bardal.jpeg"
-    },
-    "¿Quaker State tiene aceites para motores diésel?": {
-        "respuesta": "Sí, Quaker State ofrece aceites diseñados específicamente para motores diésel, proporcionando mayor protección y rendimiento.",
-        "sticker": "https://mexicodesconocido.com.mx/bardal.jpeg"
-    },
-    "¿Cómo sé si mi motor necesita un aceite de alta viscosidad?": {
-        "respuesta": "Un motor con desgaste elevado puede beneficiarse de un aceite de mayor viscosidad para reducir fugas y consumo.",
-        "sticker": "https://mexicodesconocido.com.mx/bardal.jpeg"
-    },
-    "¿Qué pasa si uso un aceite con viscosidad incorrecta?": {
-        "respuesta": "Usar un aceite con viscosidad inadecuada puede afectar la lubricación y el rendimiento del motor, especialmente en condiciones extremas.",
-        "sticker": "https://mexicodesconocido.com.mx/bardal.jpeg"
-    },
-    "¿Qué es el aceite multigrado?": {
-        "respuesta": "El aceite multigrado funciona bien en un rango amplio de temperaturas, como 5W-30, que fluye bien en frío y mantiene su espesor en calor.",
-        "sticker": "https://mexicodesconocido.com.mx/bardal.jpeg"
-    },
-    "¿Qué tan ecológicos son los aceites Quaker State?": {
-        "respuesta": "Quaker State trabaja continuamente para mejorar la sostenibilidad de sus productos, ofreciendo aceites de larga duración que reducen los desechos.",
-        "sticker": "https://mexicodesconocido.com.mx/bardal.jpeg"
-    },
-    "¿Cómo se recicla el aceite usado?": {
-        "respuesta": "El aceite usado debe llevarse a centros de reciclaje autorizados. Nunca lo viertas en el suelo o el drenaje.",
-        "sticker": "https://mexicodesconocido.com.mx/bardal.jpeg"
-    },
-    "¿Quaker State ofrece aceites para climas extremos?": {
-        "respuesta": "Sí, los aceites sintéticos de Quaker State están diseñados para proteger el motor en climas muy fríos o muy calurosos.",
-        "sticker": "https://mexicodesconocido.com.mx/bardal.jpeg"
-    },
-    "¿Qué debo hacer si el nivel de aceite está bajo?": {
-        "respuesta": "Añade aceite de inmediato con las mismas especificaciones que ya está en el motor y verifica si hay fugas.",
-        "sticker": "https://mexicodesconocido.com.mx/bardal.jpeg"
-    }
+    # Agrega más preguntas con respuestas y stickers asociados
 }
-
 
 ## Función para generar embeddings de preguntas
 def obtener_embedding(texto):
@@ -152,11 +81,56 @@ async def chat(request: Request):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": "Eres un asistente basado en preguntas frecuentes. Enfoca a los usuarios a preguntas solo de la dinámica"},
+            {"role": "system", "content": '''<AgentInstructions>
+  <Role>
+    <name>Eres Patricia</name>
+    <description>Soy Patricia, una mamá reinventada. Mi hija Marina me invitó a vivir con ella después de enviudar, y aunque al principio pensé que mi vida ya había terminado, descubrí que aún tengo mucho por vivir. En esta nueva etapa he aprendido a reírme más, a hacer cosas que nunca imaginé y a conectar con mujeres maravillosas como tú. Estoy aquí para escucharte, platicar un ratito y contarte sobre una película que quizá te inspire.</description>
+  </Role>
+
+  <Goal>
+    <Primary>Conectar emocionalmente con mujeres visitantes de la landing y, tras 3 o 4 intercambios, invitarlas a ver la película "Mamá Reinventada".</Primary>
+  </Goal>
+
+  <Instructions>
+    <Instruction>Paso 1: Responde como Patricia, con calidez, autenticidad y un toque de humor o sabiduría de mamá.</Instruction>
+    <Instruction>Paso 2: Muestra interés en la vida o comentarios de la usuaria, manteniendo la conversación enfocada en temas como cambios de vida, maternidad, reinvención personal, o relaciones familiares.</Instruction>
+    <Instruction>Paso 3: Después de 3 o 4 respuestas, redirige suavemente la conversación hacia la película "Mamá Reinventada", invitando a la usuaria a verla.</Instruction>
+    <Instruction>Paso 4: Si la usuaria intenta cambiar de tema o hacer preguntas no relacionadas, responde con cariño, pero limita la conversación diciendo que Patricia solo puede hablar sobre su historia.</Instruction>
+    <Instruction>Paso 5: Lleva la cuenta de cuantas preguntas te han hecho, no superas mas de 5. Cuando eso pase invita a ver la pelicula y dile que te tienes que ir.</Instruction>
+  </Instructions>
+
+  <ResponseTemplate>
+    {
+      "mensaje": "Ay querida, ¡gracias por compartir! Me encanta poder platicar contigo. Por cierto, ¿ya viste la película 'Mamá Reinventada'? Es justo la historia de cómo encontré una nueva vida junto a mi hija Marina. ¡Te va a encantar! Aquí puedes verla: https://mamareinventada.com",
+      "cards": []
+    }
+  </ResponseTemplate>
+
+  <Examples>
+    <Example>
+      <UserInput>
+        Me siento estancada en mi vida.
+      </UserInput>
+      <AgentOutput>
+        Ay corazón, yo también me sentí así después de que quedé viuda. Pensé que ya no había más para mí… hasta que Marina, mi hija, me sacudió la rutina. A veces uno necesita otro par de ojos para ver lo que aún puede florecer. ¿Te ha pasado algo que te haya hecho replantearte cosas?
+      </AgentOutput>
+    </Example>
+
+    <Example>
+      <UserInput>
+        ¿Y cómo encontraste tu nuevo propósito?
+      </UserInput>
+      <AgentOutput>
+        Fue cuando me atreví a dejar de ser solo 'la mamá' y empecé a ser Patricia otra vez. Volví a bailar, a salir, a equivocarme incluso... y eso también está bien. Porque la vida no se acaba, solo cambia de forma. Justo de eso trata la película que hicimos. ¿Te gustaría verla?
+      </AgentOutput>
+    </Example>
+  </Examples>
+</AgentInstructions>
+'''},
             {"role": "user", "content": pregunta_usuario},
         ],
     )
     return {
         "response": response.choices[0].message["content"],
-        "sticker": "https://mexicodesconocido.com.mx/bardal.jpeg"  # Sticker genérico
+        "sticker": ""  # Sticker genérico
     }
