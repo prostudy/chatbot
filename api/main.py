@@ -35,7 +35,7 @@ def obtener_embedding(texto):
     return np.array(response["data"][0]["embedding"])
 
 # Cargar embeddings desde archivo
-with open("./backend/faq_embeddings.json", "r", encoding="utf-8") as f:
+with open("./faq_embeddings.json", "r", encoding="utf-8") as f:
     raw_embeddings = json.load(f)
 
 faq_embeddings = {
@@ -44,7 +44,7 @@ faq_embeddings = {
 }
 
 # Cargar datos del FAQ (respuestas y stickers)
-with open("./backend/faq_data.json", "r", encoding="utf-8") as f:
+with open("./faq_data.json", "r", encoding="utf-8") as f:
     faq = json.load(f)
     
 # Buscar la pregunta más similar
